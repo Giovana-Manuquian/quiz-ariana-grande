@@ -299,6 +299,14 @@ function verificarSeAcertou(nQuestao, resposta) {
   desbloquearAlternativas();
 }
 
+function reiniciarQuiz() {
+  pontos = 0; // Zerar os pontos
+  proximaQuestao(1); // Reiniciar o quiz começando pela primeira questão
+  instrucoes.textContent = ""; // Limpar a mensagem de fim de jogo
+  articleQuestoes.style.display = "block"; // Exibir novamente o article das questões
+  document.getElementById("btn-reiniciar").style.display = "none"; // Ocultar o botão de reiniciar
+}
+
 function fimDoJogo() {
   instrucoes.textContent = "Fim de Jogo!";
   numQuestao.textContent = "";
@@ -306,27 +314,12 @@ function fimDoJogo() {
   let pont = "";
   pontos == 0 ? (pont = "ponto") : (pont = "pontos");
 
-  pergunta.textContent = "Você conseguiu " + pontos + " " + pont;
+  pergunta.textContent = "Você conseguiu: " + pontos + " " + pont;
 
-  aviso.textContent = "Você conseguiu " + pontos + " " + pont;
-
-  // img.src = 'fotomarvel.jpg'
-
-  // a.textContent = ""
-  // b.textContent = ""
-  // c.textContent = ""
-  // d.textContent = ""
-
-  // a.setAttribute('value', '0')
-  // b.setAttribute('value', '0')
-  // c.setAttribute('value', '0')
-  // d.setAttribute('value', '0')
+  aviso.textContent = "Você conseguiu: " + pontos + " " + pont;
 
   // OCULTAR O ARTICLE DA QUESTAO
   articleQuestoes.style.display = "none";
 
-  setTimeout(function () {
-    pontos = 0; // zerar placar
-    location.reload();
-  }, 2000);
+  document.getElementById("btn-reiniciar").style.display = "block";
 }
