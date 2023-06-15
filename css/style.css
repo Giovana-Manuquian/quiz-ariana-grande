@@ -92,6 +92,7 @@ h2 {
     font-size: 1rem;
     color: #0a0a0a;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: 1px solid rgba(167, 167, 167, 0.562);
 }
 
 .questoes ol li:hover {
@@ -123,6 +124,19 @@ h2 {
 #total {
     color: rgb(22, 22, 22);
     font-size: 1rem;
+}
+
+#btn-reiniciar {
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: whitesmoke;
+    border-radius: 5px;
+}
+
+#btn-reiniciar:hover {
+    background: rgba(0, 0, 0, 0.788);
+    color: whitesmoke;
 }
 
 /* ANIMACAO */
